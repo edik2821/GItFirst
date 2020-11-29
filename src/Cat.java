@@ -4,6 +4,7 @@ public class Cat
     private double originWeight;
     private double weight;
     private double feedCount;
+    private double peed;
 
     private double minWeight;
     private double maxWeight;
@@ -42,6 +43,12 @@ public class Cat
     {
         feedCount = weight - originWeight;
         return feedCount;
+    }
+
+    public double getPeedCount()
+    {
+        peed = weight - originWeight;
+        return peed;
     }
 
     public void pee()

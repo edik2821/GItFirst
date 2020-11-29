@@ -7,8 +7,8 @@ public class Loader
         for (double i = boris.getWeight(); boris.getWeight() > 1000.0; i--)
         {
             boris.pee();
+            System.out.println("Boris peed for " + boris.getPeedCount());
         }
-        System.out.println("Boris peed for " + boris.getPeeed);
         System.out.println("Boris' weight is " + boris.getWeight());
         System.out.println("Boris is " + boris.getStatus());
 
