@@ -4,10 +4,11 @@ public class Loader
     public static void main(String[] args)
     {
         Cat boris = new Cat();
-        for (double i = boris.getWeight(); i > 1000.0; i--)
+        for (double i = boris.getWeight(); boris.getWeight() > 1000.0; i--)
         {
-            boris.meow();
+            boris.pee();
         }
+        System.out.println("Boris peed for " + boris.getPeeed);
         System.out.println("Boris' weight is " + boris.getWeight());
         System.out.println("Boris is " + boris.getStatus());
 
@@ -18,5 +19,6 @@ public class Loader
         }
         System.out.println("Markiz's weight is " + markiz.getWeight());
         System.out.println("Markis is " + markiz.getStatus());
+        System.out.println("Markiz ate " + markiz.getFeedCount());
     }
 }

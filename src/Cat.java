@@ -3,6 +3,7 @@ public class Cat
 {
     private double originWeight;
     private double weight;
+    private double feedCount;
 
     private double minWeight;
     private double maxWeight;
@@ -35,6 +36,18 @@ public class Cat
     public Double getWeight()
     {
         return weight;
+    }
+
+    public double getFeedCount()
+    {
+        feedCount = weight - originWeight;
+        return feedCount;
+    }
+
+    public void pee()
+    {
+        weight = weight - (50 + 150 * Math.random());
+        System.out.println("Psssss");
     }
 
     public String getStatus()
