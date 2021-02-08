@@ -15,7 +15,6 @@ public class Cat
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
-
     }
 
     public void meow()
@@ -27,6 +26,12 @@ public class Cat
     public void feed(Double amount)
     {
         weight = weight + amount;
+        feedCount = feedCount + amount;
+    }
+
+    public double getFeedCount()
+    {
+        return feedCount;
     }
 
     public void drink(Double amount)
@@ -37,12 +42,6 @@ public class Cat
     public Double getWeight()
     {
         return weight;
-    }
-
-    public double getFeedCount()
-    {
-        feedCount = weight - originWeight;
-        return feedCount;
     }
 
     public double getPeedCount()
@@ -59,17 +58,19 @@ public class Cat
 
     public String getStatus()
     {
-        if(weight < minWeight) {
+        if(weight < minWeight)
+        {
             return "Dead";
         }
-        else if(weight > maxWeight) {
+        else if(weight > maxWeight)
+        {
             return "Exploded";
         }
-        else if(weight > originWeight) {
+        else if(weight > originWeight)
+        {
             return "Sleeping";
         }
-        else {
+        else
             return "Playing";
-        }
     }
 }
