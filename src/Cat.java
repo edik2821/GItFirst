@@ -48,7 +48,7 @@ public class Cat
     public double getPeedCount()
     {
         peed = weight - originWeight;
-        return peed;
+        return Math.abs(peed);
     }
 
     public void pee()
